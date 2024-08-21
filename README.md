@@ -54,24 +54,24 @@ concurrent.futures: Facilita a execução de funções em paralelo usando thread
 
 #### Diretório de Salvamento
 
-Agora, seguiremos com a explicação de algumas das funções principais e da lógica do script. O código está devidamente comentado por etapas, proporcionando uma visão geral das operações de cada bloco até o resultado final. Iniciaremos pela função open_directory(). Essa função é responsável por abrir o diretório local onde as imagens baixadas são armazenadas, conforme especificado na variável save_folder, quando um clique é detectado no link presente no log de texto da interface gráfica da aplicação. Essa funcionalidade foi adicionada posteriormente como uma melhoria de qualidade de vida para o usuário.
+Agora, seguiremos com a explicação de algumas das funções principais e da lógica do script. O código está devidamente comentado por etapas, proporcionando uma visão geral das operações de cada bloco até o resultado final. Iniciaremos pela função *open_directory()*. Essa função é responsável por abrir o diretório local onde as imagens baixadas são armazenadas, conforme especificado na variável save_folder, quando um clique é detectado no link presente no log de texto da interface gráfica da aplicação. Essa funcionalidade foi adicionada posteriormente como uma melhoria de qualidade de vida para o usuário.
 
 <img src="https://github.com/Murillodgc/Steam_Screenshot_Exporter/blob/main/images/bloco1.jpg" alt="mediana_nivel" />
 <img src="https://github.com/Murillodgc/Steam_Screenshot_Exporter/blob/main/images/bloco1_2.jpg" alt="mediana_nivel" />
 
 #### Donwload de Imagens
 
-Este bloco de código refere-se à função download_images(), que desempenha o papel central no início do processo de download das imagens. Podemos dividi-lo em duas partes principais:
+Este bloco de código refere-se à função *download_images()*, que desempenha o papel central no início do processo de download das imagens. Podemos dividi-lo em duas partes principais:
 
-A primeira parte está relacionada à função download_image(img_url, save_folder, log_text, subfolder_name). Essa função é responsável por fazer o download de uma única imagem. Os passos envolvidos nessa etapa incluem:
+A primeira parte está relacionada à função *download_image(img_url, save_folder, log_text, subfolder_name)*. Essa função é responsável por fazer o download de uma única imagem. Os passos envolvidos nessa etapa incluem:
 
 Limpeza do nome do arquivo: Usa expressões regulares para remover caracteres inválidos no nome do arquivo para uso futuro em criação de pastas.
-Download da imagem: Baixa a imagem da URL e a salva no diretório save_folder.
-Log: Atualiza o log_text com uma mensagem sobre o sucesso ou falha do download.
+Download da imagem: Baixa a imagem da URL e a salva no diretório *save_folder*.
+Log: Atualiza o *log_text* com uma mensagem sobre o sucesso ou falha do download.
 
 <img src="https://github.com/Murillodgc/Steam_Screenshot_Exporter/blob/main/images/bloco2.jpg" alt="mediana_nivel" />
 
-A segunda parte refere-se à função download_images(). Esta é a função principal responsável por iniciar o processo de download em segundo plano. Os passos envolvidos nessa etapa incluem:
+A segunda parte refere-se à função *download_images()*. Esta é a função principal responsável por iniciar o processo de download em segundo plano. Os passos envolvidos nessa etapa incluem:
 
 Verificação da URL: Se a URL estiver vazia, mostra um erro.
 Extração do APPID: Usa expressões regulares para extrair o APPID da URL do Steam, que é necessário para gerar URLs adicionais de imagens.
@@ -91,7 +91,7 @@ O terceiro bloco de código refere-se à criação da interface gráfica da apli
 
 #### Execução do Script
 
-O último bloco de código refere-se à execução do programa, onde a interface gráfica é mantida ativa por meio do comando window.mainloop(), permitindo que o sistema permaneça em operação enquanto aguarda interações do usuário.
+O último bloco de código refere-se à execução do programa, onde a interface gráfica é mantida ativa por meio do comando *window.mainloop()*, permitindo que o sistema permaneça em operação enquanto aguarda interações do usuário.
 
 <img src="https://github.com/Murillodgc/Steam_Screenshot_Exporter/blob/main/images/bloco4.jpg" alt="mediana_nivel" />
 
