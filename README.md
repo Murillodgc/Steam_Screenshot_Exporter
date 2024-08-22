@@ -43,14 +43,14 @@ Iniciaremos a análise discutindo as bibliotecas utilizadas no projeto e a final
 
 <img src="https://github.com/Murillodgc/Steam_Screenshot_Exporter/blob/main/images/libraries.jpg" alt="mediana_nivel" />
 
-os: Permite a manipulação de diretórios e arquivos.
-requests: Faz requisições HTTP, como baixar conteúdo de URLs.
-re: Utilizado para expressões regulares, permitindo buscas textuais avançadas.
-BeautifulSoup de bs4: Faz o parsing de HTML para facilitar a extração de dados ou Webscrapping.
-tkinter: Constrói interfaces gráficas.
-threading: Lida com threads para execução simultânea, dando mais agilidade ao processo.
-webbrowser: Abre URLs no navegador.
-concurrent.futures: Facilita a execução de funções em paralelo usando threads.
+**os**: Permite a manipulação de diretórios e arquivos. <br>
+**requests**: Faz requisições HTTP, como baixar conteúdo de URLs. <br>
+**re**: Utilizado para expressões regulares, permitindo buscas textuais avançadas. <br>
+**BeautifulSoup de bs4**: Faz o parsing de HTML para facilitar a extração de dados ou Webscrapping. <br>
+**tkinter**: Constrói interfaces gráficas. <br>
+**threading**: Lida com threads para execução simultânea, dando mais agilidade ao processo. <br>
+**webbrowser**: Abre URLs no navegador. <br>
+**concurrent.futures**: Facilita a execução de funções em paralelo usando threads.
 
 #### Diretório de Salvamento
 
@@ -65,21 +65,21 @@ Este bloco de código refere-se à função *download_images()*, que desempenha 
 
 A primeira parte está relacionada à função *download_image(img_url, save_folder, log_text, subfolder_name)*. Essa função é responsável por fazer o download de uma única imagem. Os passos envolvidos nessa etapa incluem:
 
-Limpeza do nome do arquivo: Usa expressões regulares para remover caracteres inválidos no nome do arquivo para uso futuro em criação de pastas.
-Download da imagem: Baixa a imagem da URL e a salva no diretório *save_folder*.
-Log: Atualiza o *log_text* com uma mensagem sobre o sucesso ou falha do download.
+**Limpeza do nome do arquivo**: Usa expressões regulares para remover caracteres inválidos no nome do arquivo para uso futuro em criação de pastas. <br>
+**Download da imagem**: Baixa a imagem da URL e a salva no diretório *save_folder*. <br>
+**Log**: Atualiza o *log_text* com uma mensagem sobre o sucesso ou falha do download.
 
 <img src="https://github.com/Murillodgc/Steam_Screenshot_Exporter/blob/main/images/bloco2.jpg" alt="mediana_nivel" />
 
 A segunda parte refere-se à função *download_images()*. Esta é a função principal responsável por iniciar o processo de download em segundo plano. Os passos envolvidos nessa etapa incluem:
 
-Verificação da URL: Se a URL estiver vazia, mostra um erro.
-Extração do APPID: Usa expressões regulares para extrair o APPID da URL do Steam, que é necessário para gerar URLs adicionais de imagens.
-Download da página: Faz o download do HTML da página do jogo para extrair o nome do jogo e possíveis URLs de imagens.
-Criação do diretório de salvamento: Cria um diretório baseado no nome do jogo para salvar as imagens.
-Log de início: Atualiza o log com mensagens iniciais.
-Busca de imagens: Encontra URLs de imagens específicas (1920x1080) e adiciona URLs extras geradas com base no APPID.
-Thread para download: Inicia um thread que usa ThreadPoolExecutor para baixar as imagens em paralelo, diminuindo o tempo de execução do script.
+**Verificação da URL**: Se a URL estiver vazia, mostra um erro. <br>
+**Extração do APPID**: Usa expressões regulares para extrair o APPID da URL do Steam, que é necessário para gerar URLs adicionais de imagens. <br>
+**Download da página**: Faz o download do HTML da página do jogo para extrair o nome do jogo e possíveis URLs de imagens. <br>
+**Criação do diretório de salvamento**: Cria um diretório baseado no nome do jogo para salvar as imagens. <br>
+**Log de início**: Atualiza o log com mensagens iniciais. <br>
+**Busca de imagens**: Encontra URLs de imagens específicas (1920x1080) e adiciona URLs extras geradas com base no APPID. <br>
+**Thread para download**: Inicia um thread que usa ThreadPoolExecutor para baixar as imagens em paralelo, diminuindo o tempo de execução do script. <br>
 
 <img src="https://github.com/Murillodgc/Steam_Screenshot_Exporter/blob/main/images/bloco2.2.jpg" alt="mediana_nivel" />
 
